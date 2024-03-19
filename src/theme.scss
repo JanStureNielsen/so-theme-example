@@ -6,7 +6,7 @@ $color-palette-state-0: mat.define-palette(mat.$blue-palette);
 $color-palette-state-1: mat.define-palette(mat.$red-palette);
 
 // Define a dark theme
-$dark-theme: mat.define-dark-theme((
+$theme-0: mat.define-dark-theme((
  color: (
    primary: mat.define-palette(mat.$pink-palette),
    accent: mat.define-palette(mat.$blue-grey-palette),
@@ -17,8 +17,8 @@ $dark-theme: mat.define-dark-theme((
 ));
 
 // Apply the dark theme by default
-@include mat.core-theme($dark-theme);
-@include mat.all-component-themes($dark-theme);
+@include mat.core-theme($theme-0);
+@include mat.all-component-themes($theme-0);
 
 .theme-1 {
   // Define a light theme
