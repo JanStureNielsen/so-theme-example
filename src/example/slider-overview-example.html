@@ -1,0 +1,23 @@
+<div>
+  <button (click)="useOtherTheme = !useOtherTheme">Change theme</button>
+  User other theme: {{useOtherTheme}}
+</div>
+
+<mat-slider [ngClass]="{'use-light-theme': useOtherTheme}">
+  <input matSliderThumb />
+</mat-slider>
+
+<div>
+  <button (click)="useOtherColor = !useOtherColor">Change color</button>
+  Use different class with a color from palette {{useOtherColor}}
+</div>
+
+<mat-slider
+  [ngClass]="{'use-some-color': !useOtherColor, 'use-other-color': useOtherColor}"
+>
+  <input matSliderThumb />
+</mat-slider>
+
+<!-- Copyright 2024 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
