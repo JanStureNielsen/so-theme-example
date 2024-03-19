@@ -16,19 +16,45 @@ $dark-theme: mat.define-dark-theme((
   density: 0,
 ));
 
-// Define a light theme
-$light-theme: mat.define-light-theme((
- color: (
-   primary: mat.define-palette(mat.$indigo-palette),
-   accent: mat.define-palette(mat.$pink-palette),
- ),
-));
-
 // Apply the dark theme by default
 @include mat.core-theme($dark-theme);
 @include mat.all-component-themes($dark-theme);
 
-.use-light-theme {
-  @include mat.core-color($light-theme);
-  @include mat.all-component-themes($light-theme);
+.theme-1 {
+  // Define a light theme
+  $theme-1-def: mat.define-light-theme((
+   color: (
+     primary: mat.define-palette(mat.$indigo-palette),
+     accent: mat.define-palette(mat.$pink-palette),
+   ),
+  ));
+
+  @include mat.core-color($theme-1-def);
+  @include mat.all-component-themes($theme-1-def);
+}
+
+.theme-2 {
+  // Define a light theme
+  $theme-2-def: mat.define-light-theme((
+   color: (
+     primary: mat.define-palette(mat.$green-palette),
+     accent: mat.define-palette(mat.$yellow-palette),
+   ),
+  ));
+
+  @include mat.core-color($theme-2-def);
+  @include mat.all-component-themes($theme-2-def);
+}
+
+.theme-3 {
+  // Define a light theme
+  $theme-3-def: mat.define-light-theme((
+   color: (
+     primary: mat.define-palette(mat.$red-palette),
+     accent: mat.define-palette(mat.$purple-palette),
+   ),
+  ));
+
+  @include mat.core-color($theme-3-def);
+  @include mat.all-component-themes($theme-3-def);
 }

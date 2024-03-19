@@ -1,9 +1,9 @@
 <div>
-  <button (click)="useOtherTheme = !useOtherTheme">Change theme</button>
+  <button (click)="useOtherTheme = theme()">Change theme</button>
   User other theme: {{useOtherTheme}}
 </div>
 
-<mat-slider [ngClass]="{'use-light-theme': useOtherTheme}">
+<mat-slider [class]="useOtherTheme">
   <input matSliderThumb />
 </mat-slider>
 
